@@ -51,7 +51,7 @@ class GoogleLoginController extends Controller
                 'user_id' => $user->id,
                 'amount' => 0.00,
             ]);
-            
+
              // Send Welcome Email with a UI template
         Mail::to($user->email)->send(new \App\Mail\WelcomeMail($user));
         toast('Account verified successfully!', 'success');
@@ -61,7 +61,7 @@ class GoogleLoginController extends Controller
 
         // Send Welcome Email with a UI template
         toast('Google login successfully!', 'success');
-        return redirect()->route('dashboard.marketplace');
+        return redirect()->route('dashboard');
 
     } catch (\Exception $e) {
         \Log::error('Google Login Error: ' . $e->getMessage());

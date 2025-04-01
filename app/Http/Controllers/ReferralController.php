@@ -14,7 +14,7 @@ class ReferralController extends Controller
         // Return the redirect view with the referral code
         return view('referral.redirect', [
             'code' => $code,
-            'redirectUrl' => 'http://127.0.0.1:8000/register'
+            'redirectUrl' => 'https://app.getosusu.com/register'
         ]);
     }
 }

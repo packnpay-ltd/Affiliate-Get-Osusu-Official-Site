@@ -161,7 +161,7 @@
                     <!-- Medical Waste Incineration -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/medical-incinerator.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Incinerator" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Medical Waste Incineration</h1>
                                 <p class="text-gray-500">WHO-compliant MED-W series incinerators for safe disposal of infectious waste with smokeless operation and environmental protection.</p>
@@ -172,7 +172,7 @@
                     <!-- Total Facility Management -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/facility-management.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Facility" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Total Facility Management</h1>
                                 <p class="text-gray-500">End-to-end services including HVAC maintenance, standby generators, plumbing, electrical systems, and 24/7 emergency response.</p>
@@ -183,7 +183,7 @@
                     <!-- Turnkey Medical Equipment -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/medical-equipment.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Equipment" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Turnkey Medical Equipment</h1>
                                 <p class="text-gray-500">Supply and installation of ICU ventilators, anesthesia machines, surgical pendants, and operating theater equipment.</p>
@@ -194,7 +194,7 @@
                     <!-- Endoscopy Unit Solutions -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/endoscopy-unit.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Endoscopy" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Endoscopy Unit Solutions</h1>
                                 <p class="text-gray-500">Specialized facility design and management for gastrointestinal endoscopy units with advanced workflow optimization.</p>
@@ -205,7 +205,7 @@
                     <!-- Security & Surveillance -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/cctv-security.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Security" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Security & Surveillance</h1>
                                 <p class="text-gray-500">Integrated CCTV monitoring, access control systems, and loss prevention strategies with real-time remote surveillance.</p>
@@ -216,7 +216,7 @@
                     <!-- Environmental Maintenance -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/landscaping.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Environment" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Environmental Maintenance</h1>
                                 <p class="text-gray-500">Disease control through landscape management, pest eradication, and infrastructure preservation for safe healthcare environments.</p>
@@ -227,7 +227,7 @@
                     <!-- Advanced Diagnostics -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/diagnostics.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Diagnostics" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Advanced Diagnostics</h1>
                                 <p class="text-gray-500">Cutting-edge CT scanners and digital mammography systems with multislice scanning capabilities for accurate diagnoses.</p>
@@ -238,7 +238,7 @@
                     <!-- Government Partnerships -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/government-partnership.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Government" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Government Partnerships</h1>
                                 <p class="text-gray-500">Management of public health initiatives and supply chain logistics for epidemic prevention and healthcare infrastructure development.</p>
@@ -249,7 +249,7 @@
                     <!-- Operational Excellence -->
                     <div>
                         <div class="bg-white flex items-center rounded gap-5 p-5">
-                            <img src="{{ url('/images/training.jpg') }}" class="w-20">
+                            <img src="https://placehold.co/80x80/EEE/31343C?font=roboto&text=Excellence" class="w-20">
                             <div>
                                 <h1 class="mb-3 text-lg font-bold font-heading">Operational Excellence</h1>
                                 <p class="text-gray-500">Implementation of military-grade execution systems integrating strategy deployment, performance management, and continuous improvement.</p>

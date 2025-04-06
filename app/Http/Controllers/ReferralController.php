@@ -9,12 +9,12 @@ class ReferralController extends Controller
 {
     public function handleReferral($code)
     {
+        // Assuming the code is in the format REF000001
         $affiliateProgram = AffiliateProgram::where('referral_code', $code)->firstOrFail();
 
-        // Return the redirect view with the referral code
-        return view('referral.redirect', [
-            'code' => $code,
-            'redirectUrl' => 'https://app.getosusu.com/register'
-        ]);
+        // Redirect to registration page with referral code as a URL parameter
+        return redirect('http://app.getosusu.com/register?ref=' . $code);
     }
+
+
 }

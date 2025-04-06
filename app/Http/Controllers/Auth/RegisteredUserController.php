@@ -54,7 +54,11 @@ class RegisteredUserController extends Controller
 
         public function registerIndividual(): View
     {
-        return view('auth.individual_register_home');
+        $referralCode = request()->query('ref');
+        if ($referralCode) {
+            session(['referral_code' => $referralCode]);
+        }
+        return view('auth.individual_register_home', ['referralCode' => $referralCode]);
     }
 
         public function registerCorporate(): View

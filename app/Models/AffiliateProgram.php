@@ -24,7 +24,7 @@ class AffiliateProgram extends Model
 
         static::creating(function ($affiliateProgram) {
             if (!$affiliateProgram->referral_code) {
-                $affiliateProgram->referral_code = ReferralCodeService::generateUniqueCode();
+                $affiliateProgram->referral_code = 'REF' . str_pad($affiliateProgram->user_id, 6, '0', STR_PAD_LEFT);
             }
         });
     }

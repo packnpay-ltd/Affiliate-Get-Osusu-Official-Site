@@ -45,7 +45,7 @@
                                         <td class="px-6 py-4 text-sm text-gray-500">{{ $earning->created_at->format('M d, Y') }}</td>
                                         <td class="px-6 py-4 text-sm">
                                             <span class="px-2 py-1 text-xs font-semibold rounded-full
-                                                {{ $earning->status === 'completed' ? 'bg-green-100 text-green-800' :
+                                                {{ $earning->status === 'approved' ? 'bg-green-100 text-green-800' :
                                                    ($earning->status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
                                                    'bg-red-100 text-red-800') }}">
                                                 {{ ucfirst($earning->status) }}

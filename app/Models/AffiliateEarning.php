@@ -10,23 +10,21 @@ class AffiliateEarning extends Model
     use HasFactory;
 
     protected $fillable = [
-        'affiliate_referral_id',
         'user_id',
-        'order_history_id',
+        'referral_id',
         'amount',
-        'type',
         'status',
         'description',
     ];
 
-    public function referral()
-    {
-        return $this->belongsTo(AffiliateReferral::class, 'affiliate_referral_id');
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function referral()
+    {
+        return $this->belongsTo(AffiliateReferral::class);
     }
 
     public function orderHistory()

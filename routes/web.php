@@ -81,7 +81,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/affiliate/overview', [AffiliateController::class, 'overview'])->name('affiliate.overview');
     Route::get('/affiliate/referrals', [AffiliateController::class, 'referrals'])->name('affiliate.referrals');
     Route::get('/affiliate/earnings', [AffiliateController::class, 'earnings'])->name('affiliate.earnings');
-    Route::get('/affiliate/marketing', [AffiliateController::class, 'marketing'])->name('affiliate.marketing');
 });
 
 Route::get('/join/{code}', [ReferralController::class, 'handleReferral'])->name('referral.join');

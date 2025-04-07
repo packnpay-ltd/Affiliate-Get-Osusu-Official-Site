@@ -54,7 +54,7 @@
                                         <td class="px-6 py-4 text-sm text-gray-500"><?php echo e($earning->created_at->format('M d, Y')); ?></td>
                                         <td class="px-6 py-4 text-sm">
                                             <span class="px-2 py-1 text-xs font-semibold rounded-full
-                                                <?php echo e($earning->status === 'completed' ? 'bg-green-100 text-green-800' :
+                                                <?php echo e($earning->status === 'approved' ? 'bg-green-100 text-green-800' :
                                                    ($earning->status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
                                                    'bg-red-100 text-red-800')); ?>">
                                                 <?php echo e(ucfirst($earning->status)); ?>
@@ -84,4 +84,5 @@
 <?php if (isset($__componentOriginal9ac128a9029c0e4701924bd2d73d7f54)): ?>
 <?php $component = $__componentOriginal9ac128a9029c0e4701924bd2d73d7f54; ?>
 <?php unset($__componentOriginal9ac128a9029c0e4701924bd2d73d7f54); ?>
-<?php endif; ?><?php /**PATH C:\xampp\htdocs\Affiliate-Get-Osusu-Official-Site\resources\views\affiliate\earnings.blade.php ENDPATH**/ ?>
+<?php endif; ?>
+<?php /**PATH C:\xampp\htdocs\Affiliate-Get-Osusu-Official-Site\resources\views\affiliate\earnings.blade.php ENDPATH**/ ?>

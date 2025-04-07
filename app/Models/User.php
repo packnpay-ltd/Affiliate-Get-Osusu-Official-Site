@@ -95,6 +95,11 @@ class User extends Authenticatable
         return $this->is_admin ? 'Admin' : 'User';
     }
 
+    public function earnings()
+    {
+        return $this->hasMany(AffiliateEarning::class);
+    }
+
     protected static function booted()
     {
         static::creating(function ($user) {

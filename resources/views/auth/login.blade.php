@@ -97,8 +97,8 @@
                 </div>
 
                 <!-- Google Login Button -->
-                <a
-                    href="{{ route('google.login') }}"
+                    <a
+                        href="{{ route('google.login') }}"
                     class="w-full flex items-center justify-center py-3 px-4 bg-white border border-gray-300 rounded-lg text-gray-700 font-semibold hover:bg-gray-50 transform hover:scale-[1.02] transition-all focus:outline-none focus:ring-2 focus:ring-purple-500"
                 >
                     <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24">

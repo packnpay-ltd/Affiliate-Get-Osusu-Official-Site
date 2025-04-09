@@ -1,8 +1,9 @@
+<?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAffiliateWithdrawalsTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -24,3 +25,4 @@ class CreateAffiliateWithdrawalsTable extends Migration
         Schema::dropIfExists('affiliate_withdrawals');
     }
 }
+?>

@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\Affiliate-Get-Osusu-Official-Site\resources\views\components\header.blade.php ENDPATH**/ ?>

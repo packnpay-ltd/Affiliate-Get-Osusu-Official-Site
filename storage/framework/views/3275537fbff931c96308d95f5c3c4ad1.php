@@ -1,2 +1,0 @@
-<img src="<?php echo e(asset('images/logo.png')); ?>" alt="Logo" class="w-1/3 mx-auto" />
-<?php /**PATH C:\xampp\htdocs\Affiliate-Get-Osusu-Official-Site\resources\views\components\application-logo.blade.php ENDPATH**/ ?>

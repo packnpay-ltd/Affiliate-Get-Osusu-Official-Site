@@ -50,7 +50,11 @@ class AffiliateController extends Controller
         $recentEarnings = $affiliateProgram ? $affiliateProgram->referrals()->with('earnings')->latest()->take(5)->get()->flatMap(function ($referral) {
             return $referral->earnings;
         }) : collect();
-        $recentReferrals = $affiliateProgram ? $affiliateProgram->referrals()->with('referredUser')->latest()->take(5)->get() : collect();
+        // $recentReferrals = $affiliateProgram ? $affiliateProgram->referrals()->with('referredUser')->latest()->take(5)->get() : collect();
+        $recentReferrals = $affiliateProgram ? $affiliateProgram->referrals()->with('referredUser', 'earnings')->latest()->take(5)->get()->map(function ($referral) {
+            $referral->commission = $referral->earnings->where('user_id', $referral->id)->first()->amount ?? 0; // Use referral's ID as user_id
+            return $referral;
+        }) : collect();
 
         return view('affiliate.overview', compact(
             'affiliateProgram',

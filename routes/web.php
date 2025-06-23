@@ -54,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
 
-   Route::get('/wallet', [WalletController::class, 'showWallet'])->name('wallet.show');
+    Route::get('/wallet', [WalletController::class, 'showWallet'])->name('wallet.show');
 
 
 });
@@ -66,7 +66,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/affiliate/earnings', [AffiliateController::class, 'earnings'])->name('affiliate.earnings');
 });
 
-Route::get('/join/{code}', [ReferralController::class, 'handleReferral'])->name('referral.join');
+Route::get('/join', [ReferralController::class, 'handleReferral'])->name('referral.join');
 
 
 

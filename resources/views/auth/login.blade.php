@@ -114,7 +114,7 @@
                 <!-- Register Link -->
                 <div class="mt-8 text-center">
                     <p class="text-sm text-gray-600">Not an affiliate yet?</p>
-                    <a href="{{ route('referral.join', ['code' => 'REF000001']) }}"
+                    <a href="{{ route('referral.join') }}"
                         class="text-purple-600 hover:text-purple-700 font-semibold">Join our Affiliate Program</a>
                 </div>
             </div>

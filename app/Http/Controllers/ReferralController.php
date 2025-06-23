@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 
 class ReferralController extends Controller
 {
-    public function handleReferral($code)
+    public function handleReferral(Request $request)
     {
-        // Assuming the code is in the format REF000001
-        $affiliateProgram = AffiliateProgram::where('referral_code', $code)->firstOrFail();
+        $code = $request->query('code');
 
-        // Redirect to registration page with referral code as a URL parameter
-        return redirect(config('app.parent_url') . '/register?ref=' . urlencode($code));
+        if ($code && $affiliateProgram = AffiliateProgram::where('referral_code', $code)->first()) {
+            return redirect(config('app.parent_url') . '/register?ref=' . urlencode($code));
+
+        }
+
+        return redirect(config('app.parent_url') . '/register');
     }
 
 

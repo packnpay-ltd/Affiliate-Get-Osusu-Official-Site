@@ -2,17 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Transaction; // Assuming you have a Transaction model
-use Illuminate\Support\Facades\Auth;
-use App\Models\InstallmentPlan;
 use App\Models\Cart;
 use App\Models\OrderHistory;
+use Illuminate\Http\Request;
+use App\Models\InstallmentPlan;
 use App\Models\AffiliateEarning;
 use App\Models\AffiliateReferral;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use App\Services\Api\OsusuApiService;
+use App\Models\Transaction; // Assuming you have a Transaction model
 
 class UserController extends Controller
 {
+
+    protected $osusuService;
+    public function __construct(OsusuApiService $osusuService)
+    {
+        $this->osusuService = $osusuService;
+    }
+
 public function index()
 {
     $user = Auth::user();
@@ -43,10 +52,12 @@ public function index()
         : 0;
 
     // Fetch recent transactions
-    $transactions = Transaction::where('user_id', Auth::id())
-        ->orderBy('created_at', 'desc')
-        ->take(5)
-        ->get();
+    // $transactions = Transaction::where('user_id', Auth::id())
+    //     ->orderBy('created_at', 'desc')
+    //     ->take(5)
+    //     ->get();
+
+        $transactions = $this->osusuService->getTransactions();
 
     // Fetch recent referrals
     $recentReferrals = AffiliateReferral::with('referredUser')
@@ -66,6 +77,27 @@ public function index()
         'affiliateProgram'
     ));
 }
+
+
+
+public function callExternalApi()
+{
+    // 1. Get the logged-in user's token
+    $user = Auth::user();
+   $token = $user->createToken('auth-token')->plainTextToken;
+    
+
+    // 2. Make the API call with Bearer token
+    $response = Http::withToken($token)->get('http://osusu.test/api/v1/products');
+
+    // 3. Handle the response
+    if ($response->successful()) {
+        return $response->json();
+    }
+
+    return response()->json(['error' => 'API call failed'], $response->status());
+}
+
 
 
 }

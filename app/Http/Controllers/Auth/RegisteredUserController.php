@@ -201,7 +201,6 @@ class RegisteredUserController extends Controller
 }
 
 
-
    public function registerCorporateOTP(): View
     {
             // Retrieve the user's email from the session
@@ -275,12 +274,6 @@ class RegisteredUserController extends Controller
     toast('The OTP entered is incorrect or expired.', 'error');
     return back();
 }
-
-
-
-
-
-
 
 
 

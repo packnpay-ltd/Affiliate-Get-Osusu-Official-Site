@@ -10,9 +10,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Models\Wallet;
+use App\Services\Api\OsusuApiService;
 
 class AuthenticatedSessionController extends Controller
 {
+    protected $osusuService;
+    public function __construct(OsusuApiService $osusuService)
+    {
+        $this->osusuService = $osusuService;
+    }
     /**
      * Display the login view.
      */
@@ -80,6 +86,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('https://getosusu.com');
+        return redirect(config('app.url'));
     }
+
+
 }

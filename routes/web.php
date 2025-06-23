@@ -43,31 +43,14 @@ use App\Http\Controllers\ReferralController;
 require __DIR__ . '/auth.php';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/auth/google', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
-
-
 // customers area
 Route::middleware(['auth'])->group(function () {
-
-
 
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
 

@@ -47,4 +47,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'osusu'=> [
+        'base_url'=> env('OSUSU_BASE_URL'),
+    ],
+
 ];
